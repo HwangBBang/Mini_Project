@@ -2,12 +2,19 @@
 # 한류를 소개하는 프로그램
 #### 202103769 황병훈 
 
-설계 
+## 설계 
 데이터 수집 -> 배열 및 파일 자료
 
 한류 지역 , 국가 별 현황 , 한류 정보 , 한류를 대표하는 요소 ..등등
 
-## 한류의 종류 
+Design(추상클래스)<br>
+      ↑<br>
+KoreaWave(부모클래스)  /  startProgram() , option( ),option(int number) <br>
+      ↑<br>
+k-pop,k-dining,k-game (자식 클래스) / explain() , representing() , recommend() <br>
+
+
+#### 한류의 종류 
 
 + 음악 ( k- pop )
 
