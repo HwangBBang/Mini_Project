@@ -12,8 +12,11 @@ public class Dining implements Category{
 	
 	@Override
 	public void explain() {
-		System.out.println("k-dining 의 특징은 ");
-		System.out.println();
+		System.out.println("\nk-dining 의 특징은 ");
+		System.out.println("곡물을 활용한 음식이 다양하다.\n"
+				+ "곡물 음식으로는 죽, 국수, 만두, 수제비, 떡, 술 등이 있다.\n"
+				+ "조리법이 매우 다양하고 향신료를 많이 사용한다. \n"
+				+ "간장, 설탕, 파, 마늘, 깨소금, 참기름, 후춧가루, 고춧가루 등을 사용한 요리가 주축을 이루고 있다. \n");
 	}
 
 	@Override
@@ -27,20 +30,21 @@ public class Dining implements Category{
 	
 	}
 
-	Scanner inputRecomend = new Scanner(System.in);
+	
 	@Override
 	public void recommend() {
-		// TODO Auto-generated method stub
-		System.out.println("k-dining 을 대표 하는 쉐프를 입력해주세요 ");
-		System.out.print("입력: ");
-		String keyword = inputRecomend.next();
+		Scanner inputRecomend = new Scanner(System.in);	
+		try {
+			System.out.println("k-dining 을 대표 하는 쉐프를 입력해주세요 ");
+			System.out.print("입력: ");
+			String keyword = inputRecomend.next();
+			
+			diningList.add(keyword);	
+		} catch (Exception e) {inputRecomend.close();}
 		
-		diningList.add(keyword);
 
 	}
-	public void exit() {
-		inputRecomend.close();	
-	}
+	
 	
 
 }

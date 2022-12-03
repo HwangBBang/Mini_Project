@@ -14,20 +14,6 @@ public class Main {
 		Scanner optionNumber = new Scanner(System.in);
 		Scanner inputStr = new Scanner(System.in);
 		
-//		thisProgram.setCategory(k_game);
-//		thisProgram.operateNumOne();
-//		thisProgram.operateNumTwo();
-//		thisProgram.operateNumThree();
-//		
-//		thisProgram.setCategory(k_pop);
-//		thisProgram.operateNumOne();
-//		thisProgram.operateNumTwo();
-//		thisProgram.operateNumThree();
-//		
-//		thisProgram.setCategory(k_dining);
-//		thisProgram.operateNumOne();
-//		thisProgram.operateNumTwo();
-//		thisProgram.operateNumThree();
 		int number = 0;
 		String kind;
 	// 주제 입력 받기 
@@ -73,7 +59,7 @@ public class Main {
 				System.out.println("프로그램이 종료됩니다.\n");
 				System.out.println("========================\n");
 				System.out.println("****************************************");
-				thisProgram.operateNumFour();
+//				thisProgram.operateNumFour();
 				break;
 			}			
 			else if (number>0 && number<4){
