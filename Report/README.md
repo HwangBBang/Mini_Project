@@ -7,12 +7,6 @@
 
 한류 지역 , 국가 별 현황 , 한류 정보 , 한류를 대표하는 요소 ..등등
 
-Design(추상클래스)<br>
-      ↑<br>
-KoreaWave(부모클래스)  /  startProgram() , option( ),option(int number) <br>
-      ↑<br>
-k-pop,k-dining,k-game (자식 클래스) / explain() , representing() , recommend() <br>
-
 
 #### 한류의 종류 
 
@@ -32,12 +26,9 @@ k-pop,k-dining,k-game (자식 클래스) / explain() , representing() , recommen
 
     +  한식의 특징
        + https://guide.michelin.com/kr/ko/article/dining-out/korean-chefs-around-the-world 
-    +  한식을 대표하는 음식
-       + 김치, 비빔밥, 불고기
+   
     +  한식계의 유명한 셰프
         + 이원일, 심영순, 유현수, 김훈이, 강민구, 임정식
-
-    +  가격 -> 추천 식당
         + 정식당( 임정식 )
         + 이원일 식탁 ( 이원일 )
         + 일상담미 ( 심영순)
