@@ -14,9 +14,10 @@ public class Main {
 		
 		Scanner input = new Scanner(System.in);
 		
-		
 		int number = 0;
 		String kind;
+		String chef;
+		
 	// 주제 입력 받기 
 
 		System.out.println("****************************************");
@@ -73,7 +74,20 @@ public class Main {
 			else if (number>0 && number<4){
 				if(number == 1) {thisProgram.operateNumOne();}
 				
-				else if (number == 2) {thisProgram.operateNumTwo();}
+				else if (number == 2) {
+					if(kind.equals("dining")) {
+
+						thisProgram.operateNumTwo();
+						
+						System.out.println("\n대표하는 셰프의 식당 정보가 궁금하시다면 셰프의 이름을 입력해주세요 !");
+						System.out.print("입력: ");chef = input.next();
+						k_dining.introduce(chef);
+						
+					}
+					
+					else {thisProgram.operateNumTwo();}
+					
+				}
 				
 				else {thisProgram.operateNumThree();}
 			}

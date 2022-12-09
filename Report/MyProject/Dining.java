@@ -21,23 +21,23 @@ class Rs{
 //카테고리 인터페이스를 상속받은 Menu를 상속받은 dining 
 public class Dining	extends Menu{
 
-//	List<String> diningList = new ArrayList<>(List.of("이원일", "심영순", "유현수", "김훈이", "강민구", "임정식"));
-	
-	// diningMap 의 key 값 은 스트링 벨류값은 객체로 받고 
-	// 생성시 초기화 하고싶음 
+	// 필드 영역에서 맵 클래스의 diningMap,diningList 선언
+	// 생성자로 해쉬맵의 데이터 값들을 초기화
+	 
 	Map <String, Object> diningMap = new HashMap<String, Object>() ;
-
-	public void Map(){
+	List<String> diningList = new ArrayList<>();
+	
+	public Dining() {
 		diningMap.put("이원일", new Rs("이원일의 식탁","서울시 용산구 한남동 684-35 ",4));
 		diningMap.put("심영순", new Rs("일상담미","서울시 용산구 한남동 680-1",7));
 		diningMap.put("유현수", new Rs("두레유","서울시 종로구 가회동 16-12",3));
 		diningMap.put("강민구", new Rs("밍글스","서울특별시 강남구 선릉로 757 힐탑빌딩 ",15));
 		diningMap.put("김훈이", new Rs("단지","346 W 52nd St, New York, NY 10019 미국",7));
 		diningMap.put("임정식", new Rs("정식당","서울시 강남구 청담동 83-24",16));
+		diningList = new ArrayList<>(diningMap.keySet());
 	}
+
 	
-	
-	List<String> diningList = new ArrayList<>(diningMap.keySet());
 	
 	Iterator<String> iterator = diningMap.keySet().iterator();
 	
@@ -46,6 +46,7 @@ public class Dining	extends Menu{
 	
 	@Override
 	public void explain() {
+		
 		System.out.println("\nk-dining 의 특징은 ");
 		System.out.println("곡물을 활용한 음식이 다양하다.\n"
 				+ "곡물 음식으로는 죽, 국수, 만두, 수제비, 떡, 술 등이 있다.\n"
@@ -55,7 +56,6 @@ public class Dining	extends Menu{
 
 	@Override
 	public void representing() {
-		
 		
 		System.out.println("\nk- dining 을 대표하는 셰프들은 다음과 같습니다. ");
 		System.out.println();
@@ -71,7 +71,6 @@ public class Dining	extends Menu{
 	public void recommend() {
 		Scanner inputRecomend = new Scanner(System.in);	
 		try {
-			List<String> diningList = new ArrayList<>(diningMap.keySet());
 			System.out.println("k-dining 을 대표 하는 쉐프를 입력해주세요 ");
 			System.out.print("입력: ");
 			String keyword = inputRecomend.next();
@@ -84,7 +83,23 @@ public class Dining	extends Menu{
 		
 
 	}
-
+	public void introduce(String chef) {
+		if (diningMap.containsKey(chef)) {
+			String name = ((Rs) diningMap.get(chef)).getName();
+			String adress = ((Rs) diningMap.get(chef)).getAdress();
+			int price = ((Rs) diningMap.get(chef)).getPrice();
+			
+			System.out.println(
+					"가게 명 : " + name +"\n"+
+					"가게 주소 : " + adress +"\n"+
+					"평균 가격 : " + price+ "만원"
+					);
+		}
+		else {
+			System.out.println(chef+"셰프님의 가게 정보는 없습니다.");
+		}
+		
+	}
 	
 
 }
