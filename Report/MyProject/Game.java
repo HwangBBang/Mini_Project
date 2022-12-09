@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 //카테고리 인터페이스를 상속받은 Game
-public class Game implements Category{
+public class Game extends Menu{
 	
 	// 컬랙션 프레임워크 어레이리스트 사용 
 	List<String> gameList = new ArrayList<String>(List.of("배틀그라운드","로스트아크","메이플스토리","피파온라인","서든어택"));
@@ -38,9 +38,11 @@ public class Game implements Category{
 			System.out.println("k-game 을 대표 하는 작품 혹은 사용자님이 즐겨하는 게임을 입력해주세요 ");
 			System.out.print("입력: ");
 			String keyword = inputRecomend.next();
-			
-			gameList.add(keyword);
-			
+			if (gameList.contains(keyword)){
+				System.out.println("해당 작품은 이미 입력 되어있습니다.");	
+			}
+			else {gameList.add(keyword);}
+		
 		} catch (Exception e) {inputRecomend.close();}
 
 	}

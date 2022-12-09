@@ -40,8 +40,11 @@ public class Pop implements Category{
 			System.out.println("k-pop대표 아티스트를 입력해주세요 ");
 			System.out.print("입력: ");
 			String keyword = inputRecomend.next();
+			if (popList.contains(keyword)){
+				System.out.println("해당 작품은 이미 입력 되어있습니다.");	
+			}
+			else {popList.add(keyword);}
 			
-			popList.add(keyword);	
 
 		} catch (Exception e) {inputRecomend.close();}
 			

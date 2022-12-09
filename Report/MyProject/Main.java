@@ -2,6 +2,7 @@ package MyProject;
 
 import java.util.Scanner;
 
+
 public class Main {
 
 	public static void main(String[] args) {
@@ -11,8 +12,8 @@ public class Main {
 		Pop k_pop = new Pop();
 		Dining k_dining = new Dining();
 		
-		Scanner optionNumber = new Scanner(System.in);
-		Scanner inputStr = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
+		
 		
 		int number = 0;
 		String kind;
@@ -24,7 +25,7 @@ public class Main {
 		while (true){
 			System.out.println("pop , dining , game 중 하나의 주제를 선택하세요 ");
 			System.out.print("입력창 : ");
-			kind = inputStr.next();
+			kind = input.next();
 			
 			if (kind.equals("pop")) {thisProgram.setCategory(k_pop); break;}
 			
@@ -54,7 +55,14 @@ public class Main {
 			System.out.println("3.사용자님이 대표되는 것을 추천해주세요 ");
 			System.out.println("4.실행을 종료할게요 ");
 			System.out.print("원하시는 옵션을 선택해주세요. :");
-			number = optionNumber.nextInt();
+			
+			String n=input.next();
+			try{Integer.parseInt(n);} // 정수 변환이 가능하면 
+			catch (Exception e) { // 정수 변환이 불가능하면 
+				System.out.println("잘못된 입력입니다. 1~4의 정수를 입력해주세요. ");
+				continue; 
+				} 
+			number = Integer.parseInt(n);
 			if (number == 4) {
 				System.out.println("프로그램이 종료됩니다.\n");
 				System.out.println("========================\n");
@@ -69,11 +77,11 @@ public class Main {
 				
 				else {thisProgram.operateNumThree();}
 			}
+			
 			System.out.println("\n========================");
 		}
 		// 두번째while 문 종료 ,
-		optionNumber.close();
-		inputStr.close();
+		input.close();
 		
 	
 	
