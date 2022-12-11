@@ -69,6 +69,9 @@
         List<String> gameList  
         배틀그라운드, 메이플스토리, 로스트 아크, 피파 온라인 시리즈  
     + 장르 -> 추천 게임  
+    
+    
+프로젝트 설명 영상 :  https://youtu.be/6_G-VJs7NK8 
 
 
 
