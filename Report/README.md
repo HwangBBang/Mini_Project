@@ -71,7 +71,7 @@
     + 장르 -> 추천 게임  
     
     
-프로젝트 설명 영상 :  https://youtu.be/6_G-VJs7NK8 
+프로젝트 설명 영상 :  [https://youtu.be/6_G-VJs7NK8 ](https://youtu.be/16pofBcMnZ8)
 
 
 
