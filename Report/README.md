@@ -7,6 +7,8 @@
 
 한류 지역 , 국가 별 현황 , 한류 정보 , 한류를 대표하는 요소 ..등등
 
+<img width="735" alt="스크린샷 2022-12-11 오후 7 34 08" src="https://user-images.githubusercontent.com/96881651/206898750-248eb003-0f6c-4734-9e62-e97cedcf4a7c.png">
+
 
 #### 한류의 종류 
 
